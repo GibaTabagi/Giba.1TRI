@@ -1,0 +1,11 @@
+:root{
+--cor-de-fundo: black;
+--verde: #5fff57;
+--branco: #FFFFFF;
+--botao-ativo: #3A3757;
+--botao-inativo: rgba(58,55,94,0.5);
+}
+{
+background:var(--cor-de-fundo);
+color:var(--branco);
+}

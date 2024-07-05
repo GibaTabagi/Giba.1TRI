@@ -1,54 +1,43 @@
-const botoes = document.querySelectorAll(".botao");
+const botoes  = document.querySelectorAll(".botao");
 const conteudo = document.querySelectorAll(".abas-conteudo");
-const tempo = document.querySelectorAll(.contador);
-const tempoObjetivo1 new Date(2024, 7, 29);
-const tempoObjetivo2 new Date(2024, 8, 29);
-const tempoObjetivo3 new Date(2024, 9, 29);
-const tempoObjetivo4 new Date(2024, 10, 29);
+const tempo = document.querySelectorAll(".contador");
+const tempoObjetivo1 = new Date(2024,11,24,23,59);
+const tempoObjetivo2 = new Date(2024,9,28,23,59);
+const tempoObjetivo3 = new Date(2025,0,1,23,59);
+const tempoObjetivo4 = new Date(2025,2,14,23,59);
 
-let segundos;
-let minutos;
-let horas; 
-let dias;
+function calculaTempo(tempoObjetivo){
+    const agora = new Date ()
+    let segundos
+    let minutos
+    let horas
+    let dias
+ segundos = Math.floor((tempoObjetivo-agora)/1000)
+ minutos = Math.floor(segundos/60)
+ horas = Math.floor(minutos/60)
+ dias = Math.floor(horas/24)
 
-let segundos2;
-let minutos2;
-let horas2; 
-let dias2;
+segundos = segundos%60
+minutos = minutos%60
+horas = horas%24
 
-let segundos3;
-let minutos3;
-let horas3; 
-let dias3;
+return 'Faltam $(dias) dias, $(horas) horas, $(minutos) minutos, $(segundos) segundos'
+}
 
-let segundos4;
-let minutos4;
-let horas4; 
-let dias4;
+tempo[0].textContent = calculaTempo(tempoObjetivo1);
+tempo[0].textContent = calculaTempo(tempoObjetivo2);
+tempo[0].textContent = calculaTempo(tempoObjetivo3);
+tempo[0].textContent = calculaTempo(tempoObjetivo4);
 
-const agora = new Date();
-tempo[0].textContent = tempoObjetivo1 - agora;
-segundos = (tempoObjetivo - agora)/1000;
-minutos = segundos/60;
-horas = minutos /60;
-dias = horas/24;
-
-segundos = Math.floor(segundos);
-minutos = Math.floor(minutos);
-horas = Math.floor(horas);
-dias = Math.floor(dias);
-
-tempo[0].textContent = 'faltam ${dias}', dias, ${horas}, horas, ${minutos}, minutos e ${segundos} segundos'
-
+tempo[0].textContent = `Faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`
 console.log(tempo);
-console.log(botoes);
-for (let i = 0; i <  botoes.length; i++) {
-    botoes[i].onclick = function() {
-        for (let j = 0;j < botoes.length; j++) {
+for (let i = 0; i < botoes.length; i++) {
+    botoes[i].onclick = function(){
+        for (let j=0;j<botoes.length;j++){
             botoes[j].classList.remove("ativo");
-            conteudo[j].classList.remove("ativo");
+            conteudo[j].classList.remove("ativo")
         }
         botoes[i].classList.add("ativo")
-       conteudo[i].classList.add("ativo")
+        conteudo[i].classList.add("ativo")
     }
 }

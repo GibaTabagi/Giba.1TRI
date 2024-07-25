@@ -21,7 +21,11 @@ segundos = segundos%60
 minutos = minutos%60
 horas = horas%24
 
+if (segundos >= 0){
 return 'Faltam $(dias) dias, $(horas) horas, $(minutos) minutos, $(segundos) segundos'
+} else {
+    return 'Prazo Finalizado!'
+}
 }
 
 tempo[0].textContent = calculaTempo(tempoObjetivo1);

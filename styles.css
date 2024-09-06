@@ -1,9 +1,9 @@
 
 :root {
     --cor-de-fundo: #1e1e1e;
-    --verde: #5FFF57;
+    --verde: #ff57ab;
     --branco: #FFFFFF;
-    --botao-ativo: #3f32d3;
+    --botao-ativo: #d8ee14;
     --botao-inativo: rgba(58,55,94,0,5);
     --texto-fundo: rgba(58,55,94,0,3);
 }
@@ -72,7 +72,7 @@ span{
 }
 
 .abas-textos{
-    background-color: #3f32d3;
+    background-color: #a50e98;
     padding: 10px;
     border-radius: 15px 15px 15px 15px;
 }
@@ -84,7 +84,7 @@ span{
 
 .aba-conteudo-titulo-secundario{
     text-align: center;
-    color: #5FFF57;
+    color: #00dabd;
     text-transform: uppercase;
 }
 
